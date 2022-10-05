@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans');
+:root {                                     /* Colores basicos para usar a lo largo del proyecto */
+  --azul: #0277bd; /*#3367d6*/
+  --azulSecundario: #bad7e5b2;
+  --gris: #646769;
+  --grisHover: #d3d4d4;
+  --fondo: rgb(255, 255, 255);
+}
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: var(--fondo);
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;                 /* Cada ancho o alto de los elementos incluye el margin y el padding en la medida final */
+}
+h1, h2, h3, h4, h5, h6{
+  font-weight: 500;
+}
+iframe{
+  width: 100%;
+  height: 100%;
+}
+h2, h3, label{
+  padding: 0 10px;                        /* Espaciado a los costados */
+}
+h4, h5{
+  color: var(--gris);
+  margin: 10px 0;                         /* Espaciado arriba y abajo */
+}
+hr{
+  margin: 10px;                           /* Divisor tiene una separacion por todos lados */
+}
+ul{
+  margin: 0 5px;
+  color: var(--gris);
+}
+figcaption{
+  font-style: italic;
+}
+.cdm-button {
+  border-radius: 7px;
+  margin: 5px;
+  padding: 8px 15px;
+  color: white;
+  background-color: var(--azul);
+  border: 0px;
+}
+.cdm-navbar{
+  position: fixed;                          /* posicion fija en la pantalla */
+  z-index: 1;                               /* Va a estar arriba de los demas elementos */
+  display: block;                           /* El unico elemento en la linea */
+  width: 100%;
+  background-color: var(--azul);
+  padding: 0 20px;
+  box-shadow: 0 0 8px var(--gris);          /* sombra leve bajo la barra azul */
+  color: white;                           /* color que afecta al texto y los iconos */
+}
+.cdm-titulo{
+  font-size: 3rem;
+}
+
+.cdm-subtitulo{
+  font-size: 2rem;
+}
+.cdm-activarMenu, .cdm-cerrarMenuLateral{
+  display: none;                            /* el icono de menu no se va a mostrar */
+}
+.cdm-menuLateral, .cdm-articulo, .cdm-botChat{
+  background-color: white;
+}
+.cdm-menuLateral{
+  position: fixed;
+  overflow-y: scroll;                       /* permite que, aun siendo un div fijo, se pueda hacer scroll vertical*/
+  top: 70px;                                /* la position fija comienza 70px alejada del borde superior */
+  bottom: 0px;                              /* la position fija comienza pegada al borde inferior */
+  padding-bottom: 50px;                     /* espacio en blanco para que al hacer scroll el contenido quede mas arriba */
+  max-width: 220px;                         /* se limita el ancho para que no crezca con el texto interior */
+  min-width: 220px;
+  font-size: 14px;
+}
+.cdm-seccionMenuLateral{
+  padding-left: 10px;
+}
+.cdm-colContenido{
+  margin-right: 10px;
+}
+.cdm-enlace {
+  padding: 0 10px 5px;
+  display: block;
+  text-decoration: none;                    /* le quita el subrayado a los links */
+  color: var(--gris);
+  word-wrap: break-word;                    /* si el texto es mas ancho que el div, continua abajo */
+}
+.cdm-enlace:hover{                          /* al pasar sobre un enlace cambia el color de la letra, el fondo y el peso */
+  color: var(--azul);                       
+  background-color: var(--azulSecundario);
+  font-weight: 700;
+}
+.cdm-aterriza-link {
+  position: relative;                       /* hace coincidir a donde aterrizar los links a las secciones con la posicion real del titulo de la seccion */
+  top:-90px;
+}
+.cdm-articulo{
+  padding: 20px 20px;
+  margin-bottom: 80px;
+}
+.nav-item:hover{
+  background-color: var(--grisHover);
+}
+.cdm-articulo h2{
+  padding: 0;
+}
+.cdm-filaImagenes, .cdm-page404, figcaption{
+  text-align: center;                       /* Las imagenes comienzan a acomodarse desde el centro */
+}
+.cdm-polaroid{
+  display: inline;                          /* Agrupa imagen con el comentario de abajo, cada polaroid aparece ua al lado de la otra*/
+}
+.cdm-imagen{
+  max-height: 200px;                        /* Las imagenes tendran un alto max de 200px, y se separan de las demas imagenes 10px hacia la derecha y abajo */
+  max-width: 400px;                         /* Las imagenes tendran un alto max de 400px para evitar miniaturas desproporcionadas */
+  margin-bottom: 10px;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.cdm-imagen:hover{
+  transform: scale(2);                      /* al pasar el mouse por encima, la imagen duplica su tamaño */
+  box-shadow: 0 0 8px var(--gris);          /* la imagen obtiene una sombra alrededor para resaltarla del fondo */
+}
+
+.cdm-bot{
+  position: fixed;                          /* el icono del bot se encuentra flotando abajo a la derecha en la pantalla */
+  bottom: 10px;
+  right: 10px;
+  transition: all 0.3s;
+}
+.cdm-botImg:hover{
+  box-shadow: none !important;
+  transform: scale(1.1) rotate(-5deg);      /* la imagen del bot se inclina un poquito */
+}
+.cdm-botChat{
+  color: black;
+  position: fixed;                          /* posicion fija en la pantalla, no importa el scroll. 110px separado de abajo y 12 del lado derecho */
+  bottom:110px;
+  right:12px;
+  width: 200px;
+  height: 200px;
+  opacity:0;                                /* opacidad en 0 para que solo se vea cuando se hace clic a la imagen del bot */
+  padding: 10px;
+  pointer-events:none;
+  overflow: initial !important;
+  transition: all 0.5s;
+  border-radius: 7px;
+  box-shadow: 0 0 8px var(--gris);
+}
+
+#cdm-abrirChat:target{
+  opacity:1;
+  pointer-events:auto;
+}
+.cdm-cerrar, .cdm-cerrarMenuLateral{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--gris);
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ↓↓↓↓ COLAPSAR ARTICULOS DE AYUDA ↓↓↓↓*/
+/* codigo original https://codepen.io/jason-knight/pen/ZEWPPVZ */
+
+.cdm-toggle_collapse {
+  display:block;
+}
+.cdm-collapseAfter{
+  margin: 0;
+}
+
+.cdm-toggle_collapse, /* los elementos estan fuera de la vista de la pantalla */
+.cdm-toggle_collapse + *  .cdm-collapseAfter ~ * {
+	position:absolute;
+	top:-999em;
+	left:-999em;
+}
+
+.cdm-toggle_collapse:checked + *  .cdm-collapseAfter ~ * {
+  position:static;
+}
+
+.cdm-toggle_collapse + * + label {
+  display:inline-block; /* los hace visibles en pantallas */
+  color:var(--gris);
+}
+
+.cdm-toggle_collapse + * + label:before {
+	content:"Ver más";
+  font-weight: 600;
+}
+
+.cdm-toggle_collapse:checked + * + label:before {
+	content:"Ver menos";
+}
+
+.cdm-toggle_collapse + * + label:after {
+	content:"\25BC";
+	display:inline-block;
+	padding:0.4em 0 0 0.3em;
+	vertical-align:top;
+	font-size:0.625em;
+}
+
+.cdm-toggle_collapse:checked + * + label:after {
+	content:"\25B2";
+}
+
+/* ↑↑↑↑↑↑ COLAPSAR ARTICULOS DE AYUDA ↑↑↑↑↑↑*/
+
+
+/* ESTOS CAMBIOS TOMAN EFECTO CUANDO LA PANTALLA TIENE UN ANCHO MENOR A 600PX */
+@media only screen and (max-width: 600px) {
+  .cdm-menuLateral{
+      display: none;                        /* Desaparece la tabla de contenido */
+  }
+  #cdm-menuLateral:target{
+    z-index: 2;
+    width: 100%;
+  }
+  .cdm-cerrarMenuLateral, #cdm-menuLateral:target{
+    display: block;                         
+  }
+  .cdm-activarMenu{
+    color: white;
+    padding: 10px 0;
+    font-size: 30px;
+    float: right;                         /* Muestra el icono de menu desplegable a la derecha*/
+    display: block;                       /* unico elemento de la linea pero no compite coon el .titulo ya que ambos tienen float */
+  }
+  .cdm-colContenido{
+      width: 95%;
+      margin-left: 10px;                    /* La columna con el contenido principal ocupa casi todo el ancho al desaparecer la tabla de contenido */
+  }
+}
