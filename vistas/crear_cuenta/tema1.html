@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">    
     <head>
-        <link rel="stylesheet" href="/cdm.css">
-        <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+        <link rel="stylesheet" href="/assets/css/cdm.css">
+        <link id="theme-style" rel="stylesheet" href="/assets/css/theme.css">
+        <script src="assets/js/lighthouse.js"></script>
     </head>
     <body>
         <div class="cdm-articulo" id="articulo">
@@ -13,13 +14,12 @@
                 Al ingresar a la pagina https://ciudadano.cdmisiones.net.ar/ verá la pantalla de ingreso (img izq). Debera hacer clic donde dice Crear Cuenta.
                 En la siguiente pantalla se le presentará el primer formulario de carga de datos, donde pondrá la información que luego usará para ingresar al
                 sistema (img der).
-                <div class="cdm-filaImagenes">
-                    <div class="cdm-polaroid">
-                        <img class="cdm-imagen" src="/img/crear_cuenta/img-01.webp" alt="Pantalla de Ingreso">
-                    </div>
-                    <div class="cdm-polaroid">
-                        <img class="cdm-imagen" src="/img/crear_cuenta/img-02.webp" alt="Crear cuenta 1">
-                    </div>
+                <div class="grid">
+                    <img src="/img/crear_cuenta/img-01.webp" alt="Pantalla de Ingreso">
+                    <img src="/img/crear_cuenta/img-02.webp" alt="Crear cuenta 1">
+                </div>
+                <div id="lightbox">
+                    <img id="lightbox-img">
                 </div>
             </p>
             <p>
@@ -55,14 +55,43 @@
                 No comparta su contraseña con otras personas. Se le pedirá que escriba nuevamente su contraseña con el fin de confirmar que es conciente de
                 la contraseña que esta eligiendo. Para mayor seguridad, anote y conserve la contraseña en un lugar seguro.
             </p>
-            <h2 class="cdm-subtitulo">Consejos de seguridad</h4>
-            <ul>
-                <li>Mientras más larga sea la contraseña, más segura será</li>
-                <li>No ingrese su fecha de nacimiento</li>
-                <li>No ingrese secuencias de números, por ej: 12345678, o 11111111</li>
-                <li>No use su número de teléfono como contraseña</li>
-            </ul>
-            
-        </div> 
+            <div class="callout-block callout-block-success">
+                <div class="content">
+                    <h4 class="callout-title">
+                        <span class="callout-icon-holder me-1">
+                            <i class="fas fa-thumbs-up"></i>
+                        </span><!--//icon-holder-->
+                        <h2 class="cdm-subtitulo">Consejos de seguridad</h4>
+                    </h4>
+                    <ul>
+                        <li>Mientras más larga sea la contraseña, más segura será</li>
+                        <li>No ingrese su fecha de nacimiento</li>
+                        <li>No ingrese secuencias de números, por ej: 12345678, o 11111111</li>
+                        <li>No use su número de teléfono como contraseña</li>
+                    </ul>
+                </div><!--//content-->
+            </div><!--//callout-block-->            
+        </div>
     </body>
+    <script>const gridImages = document.querySelectorAll(".grid > img");
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        
+        gridImages.forEach((img) => {
+          img.addEventListener("click", () => {
+            // To open lightbox
+            lightbox.classList.add("active");
+            // set the image clicked as the image of the lightbox
+            lightboxImg.src = img.src;
+          });
+        });
+        
+        // To close lightbox
+        lightbox.addEventListener("click", (e) => {
+          // if the clicked element is not the dark overlay don't close it
+          if (e.target !== e.currentTarget) return;
+          // if it was the overlay it will close it
+          lightbox.classList.remove("active");
+        });</script>
+
 </html>

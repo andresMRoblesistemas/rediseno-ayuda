@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <link rel="stylesheet" href="/cdm.css">
+        <link rel="stylesheet" href="/assets/css/cdm.css">
     </head>
     <body>
         <div class="cdm-articulo" id="articulo">
@@ -18,10 +18,11 @@
                 En el segundo campo deberá ingresar la contraseña que eligió
                 en <a href="/vistas/crear_cuenta/tema1.html#00">Crear Cuenta</a>.
             </p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/crear_cuenta/img-11.webp" alt="Pantalla de Ingreso">
-                </div>
+            <div class="grid">
+                <img  src="/img/crear_cuenta/img-11.webp" alt="Pantalla de Ingreso">
+            </div>
+            <div id="lightbox">
+                <img id="lightbox-img">
             </div>
             <p>
                 El campo contraseña va a ocultar automáticamente los caracteres que ingrese por seguridad, pero tambien cuenta con el icono 👁 al final que le permite
@@ -33,4 +34,26 @@
             
         </div>
     </body>
+    <script>
+        const gridImages = document.querySelectorAll(".grid > img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+gridImages.forEach((img) => {
+  img.addEventListener("click", () => {
+    // To open lightbox
+    lightbox.classList.add("active");
+    // set the image clicked as the image of the lightbox
+    lightboxImg.src = img.src;
+  });
+});
+
+// To close lightbox
+lightbox.addEventListener("click", (e) => {
+  // if the clicked element is not the dark overlay don't close it
+  if (e.target !== e.currentTarget) return;
+  // if it was the overlay it will close it
+  lightbox.classList.remove("active");
+});
+    </script>
 </html>

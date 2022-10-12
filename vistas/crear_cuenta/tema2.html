@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <link rel="stylesheet" href="/cdm.css">
+        <link rel="stylesheet" href="/assets/css/cdm.css">
     </head>
     <body>
         <div class="cdm-articulo">
@@ -12,8 +12,11 @@
                 En esta pantalla deberá ingresar todos sus nombres, su apellido, el tipo y número de documento, su nacionalidad, fecha de nacimiento y el género que figura
                 en el documento.
             </p>
-            <div class="cdm-filaImagenes">
-                <img class="cdm-imagen" src="/img/crear_cuenta/img-03.webp" alt="">
+            <div class="grid">
+                <img src="/img/crear_cuenta/img-03.webp" alt="">
+            </div>
+            <div id="lightbox">
+                <img id="lightbox-img">
             </div>
             <div id="01" class="cdm-aterriza-link"></div>
             <h2 class="cdm-subtitulo">Nombres</h4>
@@ -47,35 +50,34 @@
             <p>Para ingresar su fecha de nacimiento debera hacer clic en el icono del calendario (imagen izquierda), lo cual desplegará un calendario en pantalla (imagen derecha)
                 que deberá usar para elegir su fecha de nacimiento</p>
             <p>El calendario esta restringido para que solo puedan ingresar al sistema personas mayores de 16 años, asi que cualquier fecha más cercana será imposible de ingresar.</p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/crear_cuenta/img-04.webp" alt="Icono calendario">
-                </div>
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/crear_cuenta/img-05.webp" alt="Icono calendario">
-                </div>
+            <div class="grid">
+                <img src="/img/crear_cuenta/img-04.webp" alt="Icono calendario">
+                <img src="/img/crear_cuenta/img-05.webp" alt="Icono calendario">
+            </div>
+            <div id="lightbox">
+                <img id="lightbox-img">
             </div>
             <p>
                 En las siguientes imágenes se muestra donde puede hacer clic para cambiar el año (imagen izquierda) y el mes (imagen derecha). Luego queda seleccionar el dia
                 y apretar donde dice Aceptar
             </p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/crear_cuenta/img-06.webp" alt="Icono calendario">
-                </div>
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/crear_cuenta/img-07.webp" alt="Icono calendario">
-                </div>
+            <div class="grid">
+                <img  src="/img/crear_cuenta/img-06.webp" alt="Icono calendario">
+                <img  src="/img/crear_cuenta/img-07.webp" alt="Icono calendario">
+            </div>
+            <div id="lightbox">
+                <img id="lightbox-img">
             </div>
             <div id="06" class="cdm-aterriza-link"></div>
             <h2 class="cdm-subtitulo">Género</h4>
             <p>
                 Al final de la pantalla deberá ingresar el género que figura en su DNI.
             </p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/crear_cuenta/img-08.webp" alt="Icono calendario">
-                </div>
+            <div class="grid">
+                <img  src="/img/crear_cuenta/img-08.webp" alt="Icono calendario">
+            </div>
+            <div id="lightbox">
+                <img id="lightbox-img">
             </div>
             <p>Al haber completado todos los campos podrá hacer clic en el boton que dice Siguiente, o en el que dice Regresar en caso de que quiera corregir alguna información
                 ingresada en el Paso 1.
@@ -83,4 +85,26 @@
     
         </div>
     </body>
+    <script>
+        const gridImages = document.querySelectorAll(".grid > img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+gridImages.forEach((img) => {
+  img.addEventListener("click", () => {
+    // To open lightbox
+    lightbox.classList.add("active");
+    // set the image clicked as the image of the lightbox
+    lightboxImg.src = img.src;
+  });
+});
+
+// To close lightbox
+lightbox.addEventListener("click", (e) => {
+  // if the clicked element is not the dark overlay don't close it
+  if (e.target !== e.currentTarget) return;
+  // if it was the overlay it will close it
+  lightbox.classList.remove("active");
+});
+    </script>
 </html>

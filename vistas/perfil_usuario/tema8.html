@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <link rel="stylesheet" href="/cdm.css">
+        <link rel="stylesheet" href="/assets/css/cdm.css">
     </head>
     <body>
         <div class="cdm-articulo" id="articulo">
@@ -10,13 +10,9 @@
             <h2 class="cdm-subtitulo">Validación de datos</h4>
             <p>Al ingresar a nuestro perfil de usuario como se muestra en <a href="/vistas/perfil_usuario/tema7.html#01">esta sección</a>, vimos que nuestro correo y teléfono figuran con una ❌ al lado
                 (imagen izquierda). Al hacer clic en la tarjeta veremos que cada uno de estos campos tiene un mensaje (imagen derecha).</p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-23.webp" alt="">
-                </div>
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-24.webp" alt="">
-                </div>
+            <div class="grid">
+                <img  src="/img/perfil_usuario/img-23.webp" alt="">
+                <img  src="/img/perfil_usuario/img-24.webp" alt="">
             </div>
             <div id="01" class="cdm-aterriza-link"></div>
             <h2 class="cdm-subtitulo">Validar correo</h4>
@@ -24,42 +20,50 @@
                 (imagen izquierda) y hacer clic en el boton dentro del mail (imagen del medio), se abrira una pestaña en el navegador web (imagen derecha) confirmando la 
                 validación de nuestro correo electrónico.
             </p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-34.webp" alt="">
-                </div>
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-35.webp" alt="">
-                </div>
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-36.webp" alt="">
-                </div>
+            <div class="grid">
+                <img  src="/img/perfil_usuario/img-34.webp" alt="">
+                <img  src="/img/perfil_usuario/img-35.webp" alt="">
+                <img  src="/img/perfil_usuario/img-36.webp" alt="">
             </div>
             <div id="02" class="cdm-aterriza-link"></div>
             <h2 class="cdm-subtitulo">Validar teléfono</h4>
             <p>Al hacer clic donde dice "Validar teléfono" recibiremos un mensaje de WhatsApp con un enlace (imagen izquierda). Debemos hacer clic en el enlace del mensaje
                 (imagen del medio) y se abrirá en navegador web del teléfono confirmando la validación de nuestro teléfono (imagen derecha).
             </p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-37.webp" alt="">
-                </div>
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-38.webp" alt="">
-                </div>
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-39.webp" alt="Confirmacion telefono">
-                </div>
+            <div class="grid">
+                <img  src="/img/perfil_usuario/img-37.webp" alt="">
+                <img  src="/img/perfil_usuario/img-38.webp" alt="">
+                <img  src="/img/perfil_usuario/img-39.webp" alt="Confirmacion telefono">
             </div>
             <p>
                 Al finalizar estas dos validaciones estos datos apareceran con un ✔️ al lado. Esto significará que tendremos mas oportunidades de haer trámites a través del
                 sistema de CDM. Felicitaciones!
             </p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-40.webp" alt="">
-                </div>
+            <div class="grid">
+                <img  src="/img/perfil_usuario/img-40.webp" alt="">
             </div>
         </div>
     </body>
+    <script>
+        const gridImages = document.querySelectorAll(".grid > img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+gridImages.forEach((img) => {
+  img.addEventListener("click", () => {
+    // To open lightbox
+    lightbox.classList.add("active");
+    // set the image clicked as the image of the lightbox
+    lightboxImg.src = img.src;
+  });
+});
+
+// To close lightbox
+lightbox.addEventListener("click", (e) => {
+  // if the clicked element is not the dark overlay don't close it
+  if (e.target !== e.currentTarget) return;
+  // if it was the overlay it will close it
+  lightbox.classList.remove("active");
+});
+    </script>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <link rel="stylesheet" href="/cdm.css">
+        <link rel="stylesheet" href="/assets/css/cdm.css">
     </head>
     <body>
         <div class="cdm-articulo" id="articulo">
@@ -27,18 +27,20 @@
                 Al confirmarse su inicio de sesión en la página, verá la pantalla principal. En la misma aparece un menu lateral. Debe hacer clic en el
                 circulo que esta cerca del borde inferior marcado por la flecha verde. La flecha roja marca un boton que abre/cierra el menu lateral.
             </p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-22.webp" alt="Pantalla de Ingreso">
-                </div>
+            <div class="grid">
+                <img  src="/img/perfil_usuario/img-22.webp" alt="Pantalla de Ingreso">
+            </div>
+            <div id="lightbox">
+                <img id="lightbox-img">
             </div>
             <div id="02" class="cdm-aterriza-link"></div>
             <h2 class="cdm-subtitulo" >Editar los Datos de Inicio de Sesión</h4>
             <p>La primer tarjeta que vera será la que contiene su información de Inicio de Sesión. Son los datos que usa para registrarse en la pagina de CDM</p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-23.webp" alt="Datos de Inicio de Sesión">
-                </div>
+            <div class="grid">
+                <img  src="/img/perfil_usuario/img-23.webp" alt="Datos de Inicio de Sesión">
+            </div>
+            <div id="lightbox">
+                <img id="lightbox-img">
             </div>
             <p>Notará que los dos datos están precedidos por una ❌. Esto significa que necesitan ser validados.</p>
             <p>Un dato validado significa que es un dato sobre el que se comprobó que usted tiene el control, por eso es muy importante que esos datos existan y usted
@@ -50,16 +52,13 @@
                 Eso está explicado en <a href="/vistas/perfil_usuario/tema8.html#00">esta sección</a>.
             </p>
             <p>Para salir del formulario puede hacer clic donde dice Cerrar. Si está en una computadora tambien puede salir haciendo clic en cualquier parte oscurecida de la ventana</p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-24.webp" alt="Datos de Inicio de Sesión">
-                </div>
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-25.webp" alt="Campo editable">
-                </div>
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-26.webp" alt="Campo editable">
-                </div>
+            <div class="grid">
+                <img  src="/img/perfil_usuario/img-24.webp" alt="Datos de Inicio de Sesión">
+                <img  src="/img/perfil_usuario/img-25.webp" alt="Campo editable">
+                <img  src="/img/perfil_usuario/img-26.webp" alt="Campo editable">
+            </div>
+            <div id="lightbox">
+                <img id="lightbox-img">
             </div>
             <div id="03" class="cdm-aterriza-link"></div>
             <h2 class="cdm-subtitulo" >Editar los Datos Personales</h4>
@@ -68,84 +67,101 @@
                     Nacionalidad, Fecha de Nacimiento, Sexo</i>
             </p>
             <p>Cada campo puede ser editado haciendo clic en el texto del mismo, como se mostró en las imágenes de arriba.</p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-27.webp" alt="Datos de Inicio de Sesión">
-                </div>
+            <div class="grid">
+                <img  src="/img/perfil_usuario/img-27.webp" alt="Datos de Inicio de Sesión">
+            </div>
+            <div id="lightbox">
+                <img id="lightbox-img">
             </div>
             <p>En la segunda tarjeta podrá elegir una imagen para su foto de perfil, al hacer clic en la tarjeta su computadora le presentará una ventana donde deberá
                 buscar entre sus archivos para elegir la foto que desee cargar. Luego de navegar por las carpetas y encontrar el archivo de imagen, debe hacer clic en el botón
                 Abrir que esta señalado por la flecha roja.
             </p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-28.webp" alt="Carga de imagen de perfil">
-                </div>
+            <div class="grid">
+                <img  src="/img/perfil_usuario/img-28.webp" alt="Carga de imagen de perfil">
+            </div>
+            <div id="lightbox">
+                <img id="lightbox-img">
             </div>
             <div id="04" class="cdm-aterriza-link"></div>
             <h2 class="cdm-subtitulo">Editar las Direcciones</h4>
             <p>Aqui podrá actualizar sus direcciones Particular, Laboral y Otra. Cada una estará en su propia tarjeta que podrá cliquear para editar, y cada campo puede ser
                 editado haciendo clic en el texto del mismo. Adicionalmente puede ingresar su ubicación GPS</p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-29.webp" alt="Direcciones">
-                </div>
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-30.webp" alt="Direcciones">
-                </div>
+            <div class="grid">
+                <img  src="/img/perfil_usuario/img-29.webp" alt="Direcciones">
+                <img  src="/img/perfil_usuario/img-30.webp" alt="Direcciones">
+            </div>
+            <div id="lightbox">
+                <img id="lightbox-img">
             </div>
             <div id="05" class="cdm-aterriza-link"></div>
             <h2 class="cdm-subtitulo">Editar la Ubicacion GPS</h4>
             <p>Al configurar su ubicación GPS podremos brindarle una mejor experiencia usando CDM, para esto debe hacer clic en el cuadro que dice Agregar Ubicación
                 (imagen izquierda). Alli aparecerá un mapa para que ubique donde esta su domicilio real (imagen derecha).</p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-29b.webp" alt="mapa">
-                </div>
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-29c.webp" alt="mapa">
-                </div>
+            <div class="grid">
+                <img  src="/img/perfil_usuario/img-29b.webp" alt="mapa">
+                <img  src="/img/perfil_usuario/img-29c.webp" alt="mapa">
+            </div>
+            <div id="lightbox">
+                <img id="lightbox-img">
             </div>
             <p>El marcador que dice Nueva Ubicacion siempre va a quedar en medio de la pantalla, lo que usted puede mover para ubicar su domicilio es el mapa. Para moverlo
                 debe hacer clic con el mouse en alguna parte del mapa y mantener apretado mientras lo mueve. Si necesita alejar o acercar la vista del mapa puede usar la rueda del mouse
                 o las teclas + y - de su teclado. Si esta viendo el mapa desde su teléfono va a tener que usar el gesto de "pellizcar" para poder acercar o alejar la vista (imagen izquierda
                 y central). Para moverse debera usar dos dedos sobre la pantalla (imagen derecha).
             </p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/assets/pinchOut.webp" alt="gesto pellizcar">
-                </div>
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/assets/pinchIn.webp" alt="gesto pellizcar">
-                </div>
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/assets/twoFingerMove.webp" alt="Moverse con gesto de dos dedos">
-                </div>
+            <div class="grid">
+                <img  src="/assets/pinchOut.webp" alt="gesto pellizcar">
+                <img  src="/assets/pinchIn.webp" alt="gesto pellizcar">
+                <img  src="/assets/twoFingerMove.webp" alt="Moverse con gesto de dos dedos">
+            </div>
+            <div id="lightbox">
+                <img id="lightbox-img">
             </div>
             <p>Una vez que logró colocar el marcador del mapa sobre su ubicación real, debe apretar el botón que dice Establecer Ubicación.</p>
             <p>Si en otro momento necesita editar esta ubicación, debera hacer clic en la tarjeta que ahora dice Mi Ubicacion (imagen izquierda), notará que ahora el mapa muestra un marcador
                 en la ubicación que guardo previamente y que al mover el mapa aparecerá un segundo marcador para apuntar su nueva ubicación (imagen derecha). Repita el proceso de moverse por
                 el mapa y una vez colocado el marcador que dice Nueva Ubicacion donde usted desea, haga clic en el boton Establecer Ubicacion para guardar el cambio.
             </p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-29d.webp" alt="mapa">
-                </div>
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-29e.webp" alt="mapa">
-                </div>
+            <div class="grid">
+                <img  src="/img/perfil_usuario/img-29d.webp" alt="mapa">
+                <img  src="/img/perfil_usuario/img-29e.webp" alt="mapa">
+            </div>
+            <div id="lightbox">
+                <img id="lightbox-img">
             </div>
             <div id="06" class="cdm-aterriza-link"></div>
             <h2 class="cdm-subtitulo">Editar los números de teléfono</h4>
             <p>Al ingresar en esta tarjeta podrá editar sus números de teléfono Particular, Laboral y Otro</p>
-            <div class="cdm-filaImagenes">
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-32.webp" alt="Direcciones">
-                </div>
-                <div class="cdm-polaroid">
-                    <img class="cdm-imagen" src="/img/perfil_usuario/img-33.webp" alt="Direcciones">
-                </div>
+            <div class="grid">
+                <img  src="/img/perfil_usuario/img-32.webp" alt="Direcciones">
+                <img  src="/img/perfil_usuario/img-33.webp" alt="Direcciones">
+            </div>
+            <div id="lightbox">
+                <img id="lightbox-img">
             </div>
         </div>
     </body>
+    <script>
+        const gridImages = document.querySelectorAll(".grid > img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+gridImages.forEach((img) => {
+  img.addEventListener("click", () => {
+    // To open lightbox
+    lightbox.classList.add("active");
+    // set the image clicked as the image of the lightbox
+    lightboxImg.src = img.src;
+  });
+});
+
+// To close lightbox
+lightbox.addEventListener("click", (e) => {
+  // if the clicked element is not the dark overlay don't close it
+  if (e.target !== e.currentTarget) return;
+  // if it was the overlay it will close it
+  lightbox.classList.remove("active");
+});
+    </script>
 </html>
