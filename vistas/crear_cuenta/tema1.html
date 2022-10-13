@@ -3,9 +3,11 @@
     <head>
         <link rel="stylesheet" href="/assets/css/cdm.css">
         <link id="theme-style" rel="stylesheet" href="/assets/css/theme.css">
-        <script src="assets/js/lighthouse.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="/assets/js/imagePopup.js"></script>    
     </head>
     <body>
+        
         <div class="cdm-articulo" id="articulo">
             <h1 class="cdm-titulo">Crear cuenta</h1>
             <div id="00" class="cdm-aterriza-link"></div>
@@ -15,11 +17,19 @@
                 En la siguiente pantalla se le presentará el primer formulario de carga de datos, donde pondrá la información que luego usará para ingresar al
                 sistema (img der).
                 <div class="grid">
-                    <img src="/img/crear_cuenta/img-01.webp" alt="Pantalla de Ingreso">
-                    <img src="/img/crear_cuenta/img-02.webp" alt="Crear cuenta 1">
+                    <div class="grid__img-holder">
+                        <img src="/img/crear_cuenta/img-01.webp" alt="Pantalla de Ingreso">
+                    </div>
+                    <div class="grid__img-holder">
+                        <img src="/img/crear_cuenta/img-02.webp" alt="Crear cuenta 1">
+                    </div>
                 </div>
-                <div id="lightbox">
-                    <img id="lightbox-img">
+                <div class="img-popup">
+                    <img src="" alt="Popup Image">
+                    <div class="close-btn">
+                      <div class="bar"></div>
+                      <div class="bar"></div>
+                    </div>
                 </div>
             </p>
             <p>
@@ -73,25 +83,4 @@
             </div><!--//callout-block-->            
         </div>
     </body>
-    <script>const gridImages = document.querySelectorAll(".grid > img");
-        const lightbox = document.getElementById("lightbox");
-        const lightboxImg = document.getElementById("lightbox-img");
-        
-        gridImages.forEach((img) => {
-          img.addEventListener("click", () => {
-            // To open lightbox
-            lightbox.classList.add("active");
-            // set the image clicked as the image of the lightbox
-            lightboxImg.src = img.src;
-          });
-        });
-        
-        // To close lightbox
-        lightbox.addEventListener("click", (e) => {
-          // if the clicked element is not the dark overlay don't close it
-          if (e.target !== e.currentTarget) return;
-          // if it was the overlay it will close it
-          lightbox.classList.remove("active");
-        });</script>
-
 </html>

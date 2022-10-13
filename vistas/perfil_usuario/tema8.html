@@ -2,6 +2,8 @@
 <html lang="es">
     <head>
         <link rel="stylesheet" href="/assets/css/cdm.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="/assets/js/imagePopup.js"></script>    
     </head>
     <body>
         <div class="cdm-articulo" id="articulo">
@@ -11,8 +13,19 @@
             <p>Al ingresar a nuestro perfil de usuario como se muestra en <a href="/vistas/perfil_usuario/tema7.html#01">esta sección</a>, vimos que nuestro correo y teléfono figuran con una ❌ al lado
                 (imagen izquierda). Al hacer clic en la tarjeta veremos que cada uno de estos campos tiene un mensaje (imagen derecha).</p>
             <div class="grid">
-                <img  src="/img/perfil_usuario/img-23.webp" alt="">
-                <img  src="/img/perfil_usuario/img-24.webp" alt="">
+                <div class="grid__img-holder">
+                    <img  src="/img/perfil_usuario/img-23.webp" alt="">
+                </div>
+                <div class="grid__img-holder">
+                    <img  src="/img/perfil_usuario/img-24.webp" alt="">
+                </div>
+            </div>
+            <div class="img-popup">
+                <img src="" alt="Popup Image">
+                <div class="close-btn">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
             </div>
             <div id="01" class="cdm-aterriza-link"></div>
             <h2 class="cdm-subtitulo">Validar correo</h4>
@@ -21,9 +34,22 @@
                 validación de nuestro correo electrónico.
             </p>
             <div class="grid">
-                <img  src="/img/perfil_usuario/img-34.webp" alt="">
-                <img  src="/img/perfil_usuario/img-35.webp" alt="">
-                <img  src="/img/perfil_usuario/img-36.webp" alt="">
+                <div class="grid__img-holder">
+                    <img  src="/img/perfil_usuario/img-34.webp" alt="">
+                </div>
+                <div class="grid__img-holder">
+                    <img  src="/img/perfil_usuario/img-35.webp" alt="">
+                </div>
+                <div class="grid__img-holder">
+                    <img  src="/img/perfil_usuario/img-36.webp" alt="">
+                </div>
+            </div>
+            <div class="img-popup">
+                <img src="" alt="Popup Image">
+                <div class="close-btn">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
             </div>
             <div id="02" class="cdm-aterriza-link"></div>
             <h2 class="cdm-subtitulo">Validar teléfono</h4>
@@ -31,39 +57,39 @@
                 (imagen del medio) y se abrirá en navegador web del teléfono confirmando la validación de nuestro teléfono (imagen derecha).
             </p>
             <div class="grid">
-                <img  src="/img/perfil_usuario/img-37.webp" alt="">
-                <img  src="/img/perfil_usuario/img-38.webp" alt="">
-                <img  src="/img/perfil_usuario/img-39.webp" alt="Confirmacion telefono">
+                <div class="grid__img-holder">
+                    <img  src="/img/perfil_usuario/img-37.webp" alt="">
+                </div>
+                <div class="grid__img-holder">
+                    <img  src="/img/perfil_usuario/img-38.webp" alt="">
+                </div>
+                <div class="grid__img-holder">
+                    <img  src="/img/perfil_usuario/img-39.webp" alt="Confirmacion telefono">
+                </div>
+            </div>
+            <div class="img-popup">
+                <img src="" alt="Popup Image">
+                <div class="close-btn">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
             </div>
             <p>
                 Al finalizar estas dos validaciones estos datos apareceran con un ✔️ al lado. Esto significará que tendremos mas oportunidades de haer trámites a través del
                 sistema de CDM. Felicitaciones!
             </p>
             <div class="grid">
-                <img  src="/img/perfil_usuario/img-40.webp" alt="">
+                <div class="grid__img-holder">
+                    <img  src="/img/perfil_usuario/img-40.webp" alt="">
+                </div>
+            </div>
+            <div class="img-popup">
+                <img src="" alt="Popup Image">
+                <div class="close-btn">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
             </div>
         </div>
     </body>
-    <script>
-        const gridImages = document.querySelectorAll(".grid > img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-
-gridImages.forEach((img) => {
-  img.addEventListener("click", () => {
-    // To open lightbox
-    lightbox.classList.add("active");
-    // set the image clicked as the image of the lightbox
-    lightboxImg.src = img.src;
-  });
-});
-
-// To close lightbox
-lightbox.addEventListener("click", (e) => {
-  // if the clicked element is not the dark overlay don't close it
-  if (e.target !== e.currentTarget) return;
-  // if it was the overlay it will close it
-  lightbox.classList.remove("active");
-});
-    </script>
 </html>

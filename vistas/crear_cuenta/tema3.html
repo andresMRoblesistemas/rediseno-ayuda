@@ -2,6 +2,8 @@
 <html lang="es">
     <head>
         <link rel="stylesheet" href="/assets/css/cdm.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="/assets/js/imagePopup.js"></script>    
     </head>
     <body>
         <div class="cdm-articulo">
@@ -13,10 +15,16 @@
                 entra en la categoría Particular, Laboral u Otra. Los campos marcados con un asterisco (*) deben ser completados sí o sí.
             </p>
             <div class="grid">
-                <img  src="/img/crear_cuenta/img-09.webp" alt="">
+                <div class="grid__img-holder">
+                    <img  src="/img/crear_cuenta/img-09.webp" alt="">
+                </div>
             </div>
-            <div id="lightbox">
-                <img id="lightbox-img">
+            <div class="img-popup">
+                <img src="" alt="Popup Image">
+                <div class="close-btn">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
             </div>
             <div id="01" class="cdm-aterriza-link"></div>
             <h2 class="cdm-subtitulo">Teléfono</h4>
@@ -66,26 +74,4 @@
             </p>
         </div>
     </body>
-    <script>
-        const gridImages = document.querySelectorAll(".grid > img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-
-gridImages.forEach((img) => {
-  img.addEventListener("click", () => {
-    // To open lightbox
-    lightbox.classList.add("active");
-    // set the image clicked as the image of the lightbox
-    lightboxImg.src = img.src;
-  });
-});
-
-// To close lightbox
-lightbox.addEventListener("click", (e) => {
-  // if the clicked element is not the dark overlay don't close it
-  if (e.target !== e.currentTarget) return;
-  // if it was the overlay it will close it
-  lightbox.classList.remove("active");
-});
-    </script>
 </html>
