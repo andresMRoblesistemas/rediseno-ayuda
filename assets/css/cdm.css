@@ -113,13 +113,13 @@ figcaption{
 }
 
 .grid {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 80px auto 0;
   text-align: center;
 }
 
 .grid__img-holder {
-  max-width: 280px;
+  max-width: auto;
   display: inline-block;
   vertical-align: top;
   margin-bottom: 20px;

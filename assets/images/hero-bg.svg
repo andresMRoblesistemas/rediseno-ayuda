@@ -41,7 +41,7 @@
      y1="1174.141">
     <stop
        offset="0"
-       stop-color="#d1171a"
+       stop-color="#ff3c32"
        id="stop2"
        style="stop-color:#ff5867;stop-opacity:1" />
     <stop
@@ -52,7 +52,7 @@
   </linearGradient>
   <path
      d="m1650.595 755.5c56.3 272.618-131.189 364.024-310.13 505.374-347.561 273.959-503.57 14.469-1065.8 253.673s-359.832-759.047-359.832-759.047z"
-     fill="#d1171a"
+     fill="#ff3c32"
      transform="translate(120.633 -755.5)"
      id="path7"
      style="fill:#b40b1a;fill-opacity:1" />
