@@ -149,7 +149,7 @@ figcaption{
 }
 
 .img-popup img {
-  max-width: 900px;
+  max-width: 500px;
   width: 100%;
   opacity: 0;
   transform: translateY(-100px);
