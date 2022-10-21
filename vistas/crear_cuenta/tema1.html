@@ -15,6 +15,7 @@
     <script src="/cdm.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="/assets/js/imagePopup.js"></script>
+    <script src="/assets/js/collapse.js"></script>
     
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
@@ -61,7 +62,6 @@
 	    <div id="docs-sidebar" class="docs-sidebar">
 		    <div class="top-search-box d-lg-none p-3">
                 <form class="search-form">
-		            <input type="text" placeholder="Busqueda.." name="search" class="form-control search-input">
 		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
 		        </form>
             </div>
@@ -69,7 +69,7 @@
 			    <ul class="section-items list-unstyled nav flex-column pb-3">
 					<button type="button" class="collapsible"><a class="nav-link scrollto cdm-enlace" href="/vistas/crear_cuenta/tema1.html#00">Crear cuenta en CDM</a></button>
 					<div class="contenidoSeccion">
-						<li class="nav-item"><a class="nav-link cdm-enlace" href="/vistas/crear_cuenta/tema1.html#00">Inicio de Sesión</a></li>
+						<li class="nav-item" id="#00"><a class="nav-link cdm-enlace" href="#00">Inicio de Sesión</a></li>
 				    	<li class="nav-item"><a class="nav-link cdm-enlace" href="/vistas/crear_cuenta/tema2.html#00">Datos Personales</a></li>
 				    	<li class="nav-item"><a class="nav-link cdm-enlace" href="/vistas/crear_cuenta/tema3.html#00">Datos de Contacto</a></li>
 						<li class="nav-item"><a class="nav-link cdm-enlace" href="/vistas/crear_cuenta/tema4.html#00">Terminos y Condiciones</a></li>
@@ -100,9 +100,9 @@
 	    <div class="docs-content">
 		    <div class="container">
 			    <div class="cdm-col cdm-colContenido">
-                     <div class="cdm-articulo" id="articulo">
-            <h1 class="cdm-titulo">Crear cuenta</h1>
-            <div id="00" class="cdm-aterriza-link"></div>
+                    <div class="cdm-articulo" id="articulo">
+                         <div id="00" class="cdm-aterriza-link"></div>
+                            <h1 class="cdm-titulo">Crear cuenta</h1>
             <h2 class="cdm-subtitulo">Inicio de Sesión</h4>
             <p >
                 Al ingresar a la pagina https://ciudadano.cdmisiones.net.ar/ verá la pantalla de ingreso (img izq). Debera hacer clic donde dice Crear Cuenta.
@@ -186,22 +186,14 @@
 	    </div>
     </div><!--//docs-wrapper-->
    
-       
-    <!-- Javascript -->          
-    <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
-    
-    
-    <!-- Page Specific JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-    <script src="/assets/js/highlight-custom.js"></script>
+       
+    <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/plugins/popper.min.js"></script>
+    <script src="/assets/plugins/smoothscroll.min.js"></script>
+    <script src="/assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
     <script src="/assets/js/docs.js"></script>
-	<script src="/assets/js/utils.js"></script> 
+  <script src="/assets/js/utils.js"></script>
 
 </body>
-</html> 
-
-
-
-
-        
-       
+</html>

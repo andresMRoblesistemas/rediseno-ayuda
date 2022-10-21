@@ -171,6 +171,10 @@ figcaption{
   cursor: pointer;
 }
 
+.active{
+  color: var(--celeste);
+}
+
 .close-btn .bar {
   height: 4px;
   background: #333;
@@ -300,6 +304,8 @@ figcaption{
 .cdm-toggle_collapse:checked + * + label:after {
 	content:"\25B2";
 }
+
+
 
 /* ↑↑↑↑↑↑ COLAPSAR ARTICULOS DE AYUDA ↑↑↑↑↑↑*/
 
