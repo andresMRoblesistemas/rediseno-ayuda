@@ -14,21 +14,11 @@
 	<link rel="stylesheet" href="/assets/css/cdm.css">
     <script src="/cdm.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="/assets/js/imagePopup.js"></script>
     
-    
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome JS-->
-    <script defer src="/assets/fontawesome/js/all.min.js"></script>
-    
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
-
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="/assets/css/theme.css">
 	<link id="theme-style" rel="stylesheet" href="/assets/css/customTheme.css">
+    <link rel="stylesheet" href="/assets/plugins/simplelightbox/simple-lightbox.min.css">
 
 </head> 
 
@@ -42,7 +32,7 @@
 	                    <span></span>
 	                    <span></span>
 	                </button>
-	                <div class="site-logo"><a class="navbar-brand" href="../../index.html"><img style="position: absolute; top: 5px; max-height: 25px;" src="/assets/images/logoMD.png" alt="logo"></a></div>    
+	                <div class="site-logo"><a class="navbar-brand" href="../../index.html"><img style="position: absolute; top: 15px; max-height: 25px;" src="/assets/images/logoMD.png" alt="logo"></a></div>    
                 </div><!--//docs-logo-wrapper-->
             </div><!--//container-->
         </div><!--//branding-->
@@ -51,11 +41,7 @@
     
     <div class="docs-wrapper">
 	    <div id="docs-sidebar" class="docs-sidebar" style="background-color: rgb(237, 232, 228);">
-		    <div class="top-search-box d-lg-none p-3">
-                <form class="search-form">
-		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
-		        </form>
-            </div>
+		    
 		    <nav id="docs-nav" class="docs-nav navbar">
 			    <ul class="section-items list-unstyled nav flex-column pb-3">
 					<button type="button" class="collapsible"><a class="nav-link scrollto cdm-enlace" href="/vistas/crear_cuenta/tema1.html#00a">Crear cuenta en CMD</a></button>
@@ -98,27 +84,9 @@
                     <div id="01a" class="cdm-aterriza-link"></div>
             <h2 class="cdm-subtitulo">Inicio de Sesión</h4>
             <p >
-                Al ingresar a la pagina https://ciudadano.cdmisiones.net.ar/ verá la pantalla de ingreso (img izq). Debera hacer clic donde dice Crear Cuenta.
-                En la siguiente pantalla se le presentará el primer formulario de carga de datos, donde pondrá la información que luego usará para ingresar al
-                sistema (img der).
-                <div class="blob-left">
-                    <div class="grid">
-                        <div class="grid__img-holder">
-                            <img src="/img/crear_cuenta/img-01.png" alt="Pantalla de Ingreso">
-                        </div>
-                        <div class="grid__img-holder">
-                            <img src="/img/crear_cuenta/img-02.png" alt="Crear cuenta 1">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="img-popup">
-                    <img src="" alt="Popup Image">
-                    <div class="close-btn">
-                      <div class="bar"></div>
-                      <div class="bar"></div>
-                    </div>
-                </div>
+                Al ingresar a la pagina de CMD verá <a class="gallery" href="/img/crear_cuenta/img-01.png">la pantalla de ingreso</a>. Debera hacer clic donde dice Crear Cuenta.
+                En la siguiente pantalla se le presentará el primer <a class="gallery" href="/img/crear_cuenta/img-02.png">formulario de carga de datos</a>, donde pondrá la información que luego usará para ingresar al
+                sistema.
             </p>
             <p>
                 Tenga en cuenta que la información que ingrese debe ser real ya que se usará para validar su identidad y asi garantizar que solo el titular
@@ -172,23 +140,10 @@
             <div id="02a" class="cdm-aterriza-link"></div>
             <h2 class="cdm-subtitulo">Datos Personales</h4>
                 <p>
-                    En esta pantalla deberá ingresar todos sus nombres, su apellido, el tipo y número de documento, su nacionalidad, fecha de nacimiento y el género que figura
+                    <a class="gallery" href="/img/crear_cuenta/img-03.png">En esta pantalla</a> deberá ingresar todos sus nombres, su apellido, el tipo y número de documento, su nacionalidad, fecha de nacimiento y el género que figura
                     en el documento.
                 </p>
-                <div class="blob-right">
-                    <div class="grid">
-                        <div class="grid__img-holder">
-                            <img src="/img/crear_cuenta/img-03.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="img-popup">
-                <img src="" alt="Popup Image">
-                <div class="close-btn">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-                </div>
+
                 <h2 class="cdm-subtitulo">Nombres</h4>
                 <p>
                     En el campo Nombre ingrese todos sus nombre como figuran en el documento.
@@ -213,175 +168,82 @@
                 <h2 class="cdm-subtitulo">Nacionalidad</h4>
                 <p>Seleccione la nacionalidad que figura en el documento</p>
                 <h2 class="cdm-subtitulo">Fecha de nacimiento</h4>
-                <p>Para ingresar su fecha de nacimiento debera hacer clic en el icono del calendario (imagen izquierda), lo cual desplegará un calendario en pantalla (imagen derecha)
-                    que deberá usar para elegir su fecha de nacimiento</p>
+                <p>Para ingresar su fecha de nacimiento debera hacer clic en el <a class="gallery" href="/img/crear_cuenta/img-04.png">icono del calendario</a>, lo cual desplegará un <a class="gallery" href="/img/crear_cuenta/img-05.png">calendario en pantalla</a> que deberá usar para elegir su fecha de nacimiento</p>
                 <p>El calendario esta restringido para que solo puedan ingresar al sistema personas mayores de 16 años, asi que cualquier fecha más cercana será imposible de ingresar.</p>
-                <div class="blob-left">
-                    <div class="grid">
-                        <div class="grid__img-holder">
-                            <img class="chico" src="/img/crear_cuenta/img-04.png" alt="Icono calendario">
-                        </div>
-                        <div class="grid__img-holder">
-                            <img class="chico" src="/img/crear_cuenta/img-05.png" alt="Icono calendario">
-                        </div>
-                    </div>
-                </div>
-                <div class="img-popup">
-                    <img src="" alt="Popup Image">
-                    <div class="close-btn">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                </div>
                 <p>
-                    En las siguientes imágenes se muestra donde puede hacer clic para cambiar el año (imagen izquierda) y el mes (imagen derecha). Luego queda seleccionar el dia
+                    En las siguientes imágenes se muestra donde puede hacer clic para cambiar<a class="gallery" href="/img/crear_cuenta/img-06.png"> el año </a> y <a class="gallery" href="/img/crear_cuenta/img-07.png">el mes</a>. Luego queda seleccionar el dia
                     y apretar donde dice Aceptar
                 </p>
-                <div class="blob-right">
-                    <div class="grid">
-                        <div class="grid__img-holder">
-                            <img  src="/img/crear_cuenta/img-06.png" alt="Icono calendario">
-                        </div>
-                        <div class="grid__img-holder">
-                            <img  src="/img/crear_cuenta/img-07.png" alt="Icono calendario">
-                        </div>
-                    </div>
-                </div>
-                <div class="img-popup">
-                    <img src="" alt="Popup Image">
-                    <div class="close-btn">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                </div>
                 <h2 class="cdm-subtitulo">Género</h4>
                 <p>
-                    Al final de la pantalla deberá ingresar el género que figura en su DNI.
+                    <a class="gallery" href="/img/crear_cuenta/img-08.png">Al final de la pantalla</a> deberá ingresar el género que figura en su DNI.
                 </p>
-                <div class="blob-left">
-                    <div class="grid">
-                        <div class="grid__img-holder">
-                            <img  src="/img/crear_cuenta/img-08.png" alt="Icono calendario">
-                        </div>
-                    </div>
-                </div>
-                <div class="img-popup">
-                    <img src="" alt="Popup Image">
-                    <div class="close-btn">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                </div>
                 <p>Al haber completado todos los campos podrá hacer clic en el boton que dice Siguiente, o en el que dice Regresar en caso de que quiera corregir alguna información
                     ingresada en Crear Cuenta.
                 </p>
 
 
 
-                <div id="03a" class="cdm-aterriza-link"></div>
-                        <h2 class="cdm-subtitulo">Datos de Contacto</h4> 
-                        <p>
-                            En este paso podrá ingresar, o no, información detallada de contacto y ubicación. Tendrá la posibilidad de completar 3 formularios distintos dependiendo de si su información
-                            entra en la categoría Particular, Laboral u Otra. Los campos marcados con un asterisco (*) deben ser completados sí o sí.
-                        </p>
-                        <div class="grid">
-                            <div class="grid__img-holder">
-                                <img  src="/img/crear_cuenta/img-09.webp" alt="">
-                            </div>
-                        </div>
-                        <div class="img-popup">
-                            <img src="" alt="Popup Image">
-                            <div class="close-btn">
-                                <div class="bar"></div>
-                                <div class="bar"></div>
-                            </div>
-                        </div>
-                        <h2 class="cdm-subtitulo">Teléfono</h4>
-                        <p>
-                            Aqui puede ingresar un número fijo o celular, tenga en cuenta que si el número es celular debe poner el 9 adelante de todo,
-                            quitar el 0 del código de área y el 15 de su número móvil.
-                        </p>
-                        <p>Por ejemplo:</p>
-                        <p><i>Mal: 54 <strong>0</strong>1234 <strong>15</strong>123456</i></p>
-                        <p>Bien: 54 <strong>9</strong> 1234 123456</p>
+            <div id="03a" class="cdm-aterriza-link"></div>
+                <h2 class="cdm-subtitulo">Datos de Contacto</h4> 
+                <p>
+                    En este paso podrá ingresar, o no, información detallada de contacto y ubicación. Tendrá la posibilidad de completar 3 formularios distintos dependiendo de si su información
+                    entra en la categoría Particular, Laboral u Otra. <a class="gallery" href="/img/crear_cuenta/img-09.webp">Los campos marcados</a> con un asterisco (*) deben ser completados sí o sí.
+                </p>
+                <h2 class="cdm-subtitulo">Teléfono</h4>
+                <p>
+                    Aqui puede ingresar un número fijo o celular, tenga en cuenta que si el número es celular debe poner el 9 adelante de todo,
+                    quitar el 0 del código de área y el 15 de su número móvil.
+                </p>
+                <p>Por ejemplo:</p>
+                <p><i>Mal: 54 <strong>0</strong>1234 <strong>15</strong>123456</i></p>
+                <p>Bien: 54 <strong>9</strong> 1234 123456</p>
                     
-                        <h2 class="cdm-subtitulo">Provincia</h4>
-                        <p>
-                            Si desea ingresar una Provincia, puede comenzar a escribir en el campo de texto e irán apareciendo las coincidencias para autocompletar el campo más rápido.
-                        </p>
-                        
-                        <h2 class="cdm-subtitulo">Localidades</h4>
-                        <p>
-                            Para seleccionar una localidad, primero tiene que haber una provincia seleccionada. Puede comenzar a escribir en el campo de texto e irán apareciendo las coincidencias
-                            para autocompletar el campo más rápido. 
-                        </p>
-                        
-                        <h2 class="cdm-subtitulo">Barrio</h4>
-                        <p>Ingrese el nombre de su barrio.</p>
-                        <h2 class="cdm-subtitulo">Calle</h4>
-                        <p>En este campo solo ingrese el nombre de su calle, sin la altura.</p>
-                        <h2 class="cdm-subtitulo">Altura</h4>
-                        <p>Ingrese el número de su casa o altura de la calle.</p>
-                        <h2 class="cdm-subtitulo">Piso</h4>
-                        <p>Si vive en una casa de una sola planta no es necesario rellenar este campo</p>
-                        <h2 class="cdm-subtitulo">Departamento</h4>
-                        <p>En caso de vivir en un complejo de departamentos, ingrese el número del suyo. Si no, no es necesario que rellene este campo.</p>
-                        <h2 class="cdm-subtitulo">Código postal</h4>
-                        <p>Ingrese el código postal de 4 números.</p>
-                        <h2 class="cdm-subtitulo">Observaciones</h4>
-                        <p>Aquí puede ingresar alguna aclaración de cómo encontrar su domicilio, o algo que sea necesario para su ubicación.</p>
+                <h2 class="cdm-subtitulo">Provincia</h4>
+                <p>
+                    Si desea ingresar una Provincia, puede comenzar a escribir en el campo de texto e irán apareciendo las coincidencias para autocompletar el campo más rápido.
+                </p>
+                
+                <h2 class="cdm-subtitulo">Localidades</h4>
+                <p>
+                    Para seleccionar una localidad, primero tiene que haber una provincia seleccionada. Puede comenzar a escribir en el campo de texto e irán apareciendo las coincidencias
+                    para autocompletar el campo más rápido. 
+                </p>
+                
+                <h2 class="cdm-subtitulo">Barrio</h4>
+                <p>Ingrese el nombre de su barrio.</p>
+                <h2 class="cdm-subtitulo">Calle</h4>
+                <p>En este campo solo ingrese el nombre de su calle, sin la altura.</p>
+                <h2 class="cdm-subtitulo">Altura</h4>
+                <p>Ingrese el número de su casa o altura de la calle.</p>
+                <h2 class="cdm-subtitulo">Piso</h4>
+                <p>Si vive en una casa de una sola planta no es necesario rellenar este campo</p>
+                <h2 class="cdm-subtitulo">Departamento</h4>
+                <p>En caso de vivir en un complejo de departamentos, ingrese el número del suyo. Si no, no es necesario que rellene este campo.</p>
+                <h2 class="cdm-subtitulo">Código postal</h4>
+                <p>Ingrese el código postal de 4 números.</p>
+                <h2 class="cdm-subtitulo">Observaciones</h4>
+                <p>Aquí puede ingresar alguna aclaración de cómo encontrar su domicilio, o algo que sea necesario para su ubicación.</p>
                     
-                        <p>Al haber completado todos los campos podrá hacer clic en el boton que dice Siguiente, o en el que dice Regresar en caso de que quiera corregir alguna información
-                            ingresada en el Paso 2 o 1.
-                        </p>
+                <p>Al haber completado todos los campos podrá hacer clic en el boton que dice Siguiente, o en el que dice Regresar en caso de que quiera corregir alguna información
+                    ingresada en el Paso 2 o 1.
+                </p>
 
-                        <div id="04a" class="cdm-aterriza-link"></div>
-                        <h2 class="cdm-subtitulo">Terminos y Condiciones</h4> 
-                            <p>
-                                Estos Términos y Condiciones del servicio reflejan la forma de trabajar de Ciudadania Misionera Digital como empresa, las leyes por las que nos regimos y determinados
-                                aspectos que siempre hemos creído que son ciertos. Por ello, estos Términos y Condiciones del servicio ayudan a definir la relación que tiene Ciudadania Misionera Digital
-                                con usted cuando interactúa con nuestros servicios.
-                            </p>
-                            <p>Para continuar con el proceso de Crear Cuenta debe marcar el casillero para aceptar los Terminos y Condiciones. Una vez marcado se habilitara el botón Crear Cuenta</p>
-                            <div class="grid">
-                                <div class="grid__img-holder">
-                                    <img  src="/img/crear_cuenta/img-10.webp" alt="Terminos y Condiciones">
-                                </div>
-                            </div>
-                            <div class="img-popup">
-                                <img src="" alt="Popup Image">
-                                <div class="close-btn">
-                                    <div class="bar"></div>
-                                    <div class="bar"></div>
-                                </div>
-                            </div>       
-                            <p>
-                                Al haber completado todos los campos podrá hacer clic en el boton que dice Crear Cuenta, o en el que dice Regresar en caso de que quiera corregir alguna información
-                                ingresada en el Paso 3, 2 o 1.
-                            </p>
-                            <p>Al confirmar la creación de la cuenta será redirigido a la pantalla inicial, donde deberá ingresar su información de Inicio de Sesión que eligio en 
-                                <a href="/vistas/crear_cuenta/tema1.html#00">Crear Cuenta</a>
-                            </p>
-                            <div class="grid">
-                                <div class="grid__img-holder">
-                                    <img  src="/img/crear_cuenta/img-11.webp" alt="inicio de Sesión">
-                                </div>
-                            </div>
-                            <div class="img-popup">
-                                <img src="" alt="Popup Image">
-                                <div class="close-btn">
-                                    <div class="bar"></div>
-                                    <div class="bar"></div>
-                                </div>
-                            </div>
-                            <p>Si necesita ayuda con respecto al inicio de sesión, puede dirigirse a la sección <a href="/vistas/ingresar_cdm/tema5.html#00">Ingresar a CMD</a></p>
-
-
-
-
-
-
-
+                <div id="04a" class="cdm-aterriza-link"></div>
+                <h2 class="cdm-subtitulo">Terminos y Condiciones</h4> 
+                    <p>
+                        Estos Términos y Condiciones del servicio reflejan la forma de trabajar de Ciudadania Misionera Digital como empresa, las leyes por las que nos regimos y determinados
+                        aspectos que siempre hemos creído que son ciertos. Por ello, estos Términos y Condiciones del servicio ayudan a definir la relación que tiene Ciudadania Misionera Digital
+                        con usted cuando interactúa con nuestros servicios.
+                    </p>
+                    <p>Para continuar con el proceso de Crear Cuenta debe <a class="gallery" href="/img/crear_cuenta/img-10.webp">marcar el casillero</a> para aceptar los Terminos y Condiciones.
+                         Una vez marcado se habilitara el botón Crear Cuenta</p>      
+                    <p>
+                        Al haber completado todos los campos podrá hacer clic en el boton que dice Crear Cuenta, o en el que dice Regresar en caso de que quiera corregir alguna información
+                        ingresada en el Paso 3, 2 o 1.
+                    </p>
+                    <p>Al confirmar la creación de la cuenta será redirigido a <a class="gallery" href="/img/crear_cuenta/img-11.webp">la pantalla inicial</a>, donde deberá ingresar su información de Inicio de Sesión que eligio en 
+                        <a href="/vistas/crear_cuenta/tema1.html#00">Crear Cuenta</a>
 
         </div>
 				</div>
@@ -398,7 +260,7 @@
    
        
     <!-- Javascript -->          
-    <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
            
     <!-- Javascript -->          
     <script src="/assets/plugins/popper.min.js"></script>
@@ -406,7 +268,8 @@
     
     <!-- Page Specific JS -->
     <script src="/assets/plugins/smoothscroll.min.js"></script>   
-    <script src="/assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="/assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script src="/assets/plugins/simplelightbox/simple-lightbox.min.js"></script> 
     <script src="/assets/js/docs.js"></script>
     <script src="/assets/js/utils.js"></script>
 
