@@ -67,6 +67,19 @@ a:hover{
   height: 60px;
 }
 
+.btnClicAca{
+  font: inherit;
+  background-color: rgb(255, 60, 50);
+  border: none;
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 900;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
 .cdm-subtitulo{
   font-size: 2rem;
 }
